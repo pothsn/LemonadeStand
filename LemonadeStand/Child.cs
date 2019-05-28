@@ -4,14 +4,12 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class UserInterface
+    public class Child : Customer
     {
         //member variables (HAS A)
 
         //constructor (SPAWNER)
 
         //member methods (CAN DO)
-
-
     }
 }

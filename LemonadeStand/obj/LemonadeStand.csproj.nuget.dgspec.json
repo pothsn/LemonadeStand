@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj": {}
+    "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj": {}
   },
   "projects": {
-    "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj": {
+    "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj",
+        "projectUniqueName": "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj",
         "projectName": "LemonadeStand",
-        "projectPath": "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj",
+        "projectPath": "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand.csproj",
         "packagesPath": "C:\\Users\\poths\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\LemonadeStand\\obj\\",
+        "outputPath": "C:\\Users\\poths\\Documents\\devCodeCamp\\Week 4\\LemonadeStand\\LemonadeStand\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

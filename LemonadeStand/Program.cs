@@ -6,7 +6,8 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Game newGame = new Game();
+            newGame.RunGame();
         }
     }
 }
