@@ -84,16 +84,21 @@ namespace LemonadeStand
 
         public void DisplayAllWeatherForecasts()
         {
-                for (int i = currentDay; i < numberOfDays; i++)
-                {
-                    Console.WriteLine("Day " + i + ": " + days[i].weather.weatherForecast);
-                }
+            Console.WriteLine("Weather forecast:");
+            for (int i = currentDay; i < numberOfDays; i++)
+            {
+                Console.WriteLine("Day " + i + ": " + days[i].weather.weatherForecast);
+            }
             
         }
 
         public void DisplayAllTemperatureForecasts()
         {
-
+            Console.WriteLine("Temperature forecast:");
+            for (int i = currentDay; i < numberOfDays; i++)
+            {
+                Console.WriteLine("Day " + i + ": " + days[i].weather.temperatureForecast);
+            }
         }
 
 
