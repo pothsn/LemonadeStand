@@ -94,6 +94,7 @@ namespace LemonadeStand
                 store.SellPaperCups(player);
                 store.SellLemons(player);
                 store.SellCupsOfSugar(player);
+                store.SellIceCubes(player);
 
 
 

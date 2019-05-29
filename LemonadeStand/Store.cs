@@ -93,6 +93,31 @@ namespace LemonadeStand
             }
         }
 
+        public void SellIceCubes(Player player)
+        {
+            Console.WriteLine("You can buy 100 ice cubes for .89, 250 ice cubes for 2.08 or 500 ice cubes for 3.61. Enter 0, 100, 250 or 500.");
+            int playerInput = int.Parse(Console.ReadLine());
+            switch (playerInput)
+            {
+                case 0:
+                    break;
+                case 100:
+                    player.money -= iceCubesPrice;
+                    player.inventory.iceCubes += 100;
+                    break;
+                case 250:
+                    player.money -= 2.08;
+                    player.inventory.iceCubes += 250;
+                    break;
+                case 500:
+                    player.money -= 3.61;
+                    player.inventory.iceCubes += 500;
+                    break;
+            }
+        }
+
+
+
 
 
 
