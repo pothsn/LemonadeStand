@@ -7,12 +7,13 @@ namespace LemonadeStand
     public class Customer
     {
         //member variables (HAS A)
-        public string money;
+        public int money;
         public string sugarPreference;
         public string icePreference;
         public string sourPreference;
         public string temperatureInfluence;
         public string weatherInfluence;
+        public string pricePreference;
         
 
         //constructor (SPAWNER)

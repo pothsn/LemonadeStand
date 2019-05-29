@@ -7,20 +7,18 @@ namespace LemonadeStand
     public class Game
     {
         //member variables (HAS A)
-        //public List<Day> days;
         public UserInterface userInterface;
         public Store store;
         public Player player;
         public List<Day> days;
 
+
         //constructor (SPAWNER)
         public Game()
         {
-
             days = new List<Day>();
-
+            player = new Player();
         }
-
 
 
         //member methods (CAN DO)
@@ -28,13 +26,17 @@ namespace LemonadeStand
         {
         
             DisplayIntroduction();
-            int numberOfDays = SetDays();
+            int numberOfDays = UserPickDays();
             GenerateDays(numberOfDays);
+            DayActualWeather();
+            DayActualTemperature();
+            GeneratePlayer();
+            //Gameplay starts here, looping through each day in days?
+            GameplayLoop();
             
 
             
         }
-
 
         public void DisplayIntroduction()
         {
@@ -42,7 +44,7 @@ namespace LemonadeStand
             Console.ReadLine();
         }
         
-        public int SetDays()
+        public int UserPickDays()
         {
             Console.WriteLine("How many days would you like to play? Enter 7, 14, or 30.");
             int gameDays = int.Parse(Console.ReadLine());
@@ -58,5 +60,43 @@ namespace LemonadeStand
                 days.Add(day);
             }
         }
+
+        public void DayActualWeather()
+        {
+            foreach(Day day in days)
+            {
+                day.weather.GenerateActualWeather();
+            }
+        }
+
+        public void DayActualTemperature()
+        {
+            foreach(Day day in days)
+            {
+                day.weather.GenerateActualTemperature();
+            }
+        }
+
+        public void GeneratePlayer()
+        {
+            Console.WriteLine("Enter player name.");
+            player.name = Console.ReadLine();            
+        }
+
+        public void GameplayLoop()
+        {
+            foreach(Day day in days)
+            {
+                Console.WriteLine("Today's weather: " + day.weather.actualWeather + "\n" + "Today's temperature: " + day.weather.actualTemperature);
+                Console.WriteLine("Forecasted weather: " + day.weather.weatherForecast + "Temps: " + day.weather.temperatureForecast);
+                Console.WriteLine("Your money: " + player.money);
+            }
+        }
+
+
+
+
+
+
     }
 }
