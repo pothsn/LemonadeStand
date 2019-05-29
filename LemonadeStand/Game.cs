@@ -18,6 +18,7 @@ namespace LemonadeStand
         {
             days = new List<Day>();
             player = new Player();
+            store = new Store();
         }
 
 
@@ -30,7 +31,7 @@ namespace LemonadeStand
             GenerateDays(numberOfDays);
             DayActualWeather();
             DayActualTemperature();
-            GeneratePlayer();
+            GeneratePlayerName();
             //Gameplay starts here, looping through each day in days?
             GameplayLoop();
             
@@ -77,7 +78,7 @@ namespace LemonadeStand
             }
         }
 
-        public void GeneratePlayer()
+        public void GeneratePlayerName()
         {
             Console.WriteLine("Enter player name.");
             player.name = Console.ReadLine();            
@@ -89,7 +90,17 @@ namespace LemonadeStand
             {
                 Console.WriteLine("Today's weather: " + day.weather.actualWeather + "\n" + "Today's temperature: " + day.weather.actualTemperature);
                 Console.WriteLine("Forecasted weather: " + day.weather.weatherForecast + "Temps: " + day.weather.temperatureForecast);
-                Console.WriteLine("Your money: " + player.money);
+                Console.WriteLine(player.name + " has $" + player.money);
+                store.SellPaperCups(player);
+
+
+
+
+
+
+
+
+
             }
         }
 

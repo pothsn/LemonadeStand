@@ -8,7 +8,7 @@ namespace LemonadeStand
     {
         //member variables (HAS A)
         public double money;
-        public Inventory Inventory;
+        public Inventory inventory;
         public string name;
 
         //constructor (SPAWNER)
