@@ -3,7 +3,7 @@
   <Class Name="LemonadeStand.Game">
     <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgABAAAAQAAAAAAAAAAAAAAAAAAAABAAQACAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAAQAAAAAAAAAAAAAAAAAAQABAAQACEAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,6 +11,9 @@
       <Field Name="store" />
       <Field Name="player" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="days" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="LemonadeStand.UserInterface">
     <Position X="9.75" Y="0.5" Width="1.5" />
@@ -29,18 +32,18 @@
       <Field Name="weather" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="customer" />
+      <Field Name="customers" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="LemonadeStand.Weather">
     <Position X="1.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gABAAAAAAAAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Weather.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Player">
-    <Position X="7.25" Y="5.25" Width="1.5" />
+    <Position X="7" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -50,7 +53,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Inventory">
-    <Position X="12.75" Y="5" Width="1.5" />
+    <Position X="12.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAEIA=</HashCode>
       <FileName>Inventory.cs</FileName>

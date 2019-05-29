@@ -7,8 +7,9 @@ namespace LemonadeStand
     public class Day
     {
         //member variables (HAS A)
-        public List<Customer> customer;
+        public List<Customer> customers;
         public Weather weather;
+        
 
         //constructor (SPAWNER)
         public Day()

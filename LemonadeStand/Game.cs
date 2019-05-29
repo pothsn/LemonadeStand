@@ -7,26 +7,31 @@ namespace LemonadeStand
     public class Game
     {
         //member variables (HAS A)
-        public List<Day> day;
+        //public List<Day> days;
         public UserInterface userInterface;
         public Store store;
         public Player player;
-
+        public List<Day> days;
 
         //constructor (SPAWNER)
         public Game()
         {
 
-
+            days = new List<Day>();
 
         }
+
 
 
         //member methods (CAN DO)
         public void RunGame()
         {
+        
             DisplayIntroduction();
-            int days = SetDays();
+            int numberOfDays = SetDays();
+            GenerateDays(numberOfDays);
+            
+
             
         }
 
@@ -44,17 +49,14 @@ namespace LemonadeStand
             return gameDays;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        public void GenerateDays(int numberOfDays)
+        {
+            for (int i = 0; i < numberOfDays; i++)
+            {
+                Day day = new Day();
+                
+                days.Add(day);
+            }
+        }
     }
 }
