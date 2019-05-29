@@ -10,8 +10,8 @@ namespace LemonadeStand
         Random rng;
         public string weatherForecast;
         public string actualWeather;
-        public string temperatureForecast;
-        public string actualTemperature;
+        public int temperatureForecast;
+        public int actualTemperature;
 
 
 
@@ -22,7 +22,7 @@ namespace LemonadeStand
             GenerateWeatherForecast();
             GenerateTemperatureForecast();
             GenerateActualWeather();
-            GenerateActualTemperature();
+            actualTemperature = GenerateActualTemperature();
 
         }
 
@@ -50,7 +50,7 @@ namespace LemonadeStand
 
         private int GenerateTemperatureForecast()
         {
-            int temperatureForecast = rng.Next(40, 101);
+            temperatureForecast = rng.Next(40, 101);
             return temperatureForecast;
         }
 
@@ -67,10 +67,11 @@ namespace LemonadeStand
             }
         }
 
-        public void GenerateActualTemperature()
+        public int GenerateActualTemperature()
         {
             int actualTemperatureRoll = rng.Next(-4, 4);
             actualTemperature = temperatureForecast + actualTemperatureRoll;
+            return actualTemperature;
         }
 
 

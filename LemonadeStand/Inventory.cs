@@ -11,7 +11,7 @@ namespace LemonadeStand
         public int iceCubes;
         public int lemons;
         public int paperCups;
-        public double money;
+
 
 
         //constructor (SPAWNER)
