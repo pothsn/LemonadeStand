@@ -18,7 +18,7 @@ namespace LemonadeStand
         {
             paperCupsPrice = .90;
             lemonsPrice = .94;
-            cupsOfSugarPrice = .07;
+            cupsOfSugarPrice = .56;
             iceCubesPrice = .01;
         }
 
@@ -68,10 +68,29 @@ namespace LemonadeStand
                     player.inventory.lemons += 75;
                     break;
             }
+        }
 
-
-
-
+        public void SellCupsOfSugar(Player player)
+        {
+            Console.WriteLine("You can buy 8 cups of sugar for .56, 20 cups of sugar for 1.51 or 48 cups of sugar for 3.39. Enter 0, 8, 20 or 48.");
+            int playerInput = int.Parse(Console.ReadLine());
+            switch (playerInput)
+            {
+                case 0:
+                    break;
+                case 8:
+                    player.money -= cupsOfSugarPrice;
+                    player.inventory.cupsOfSugar += 8;
+                    break;
+                case 20:
+                    player.money -= 1.51;
+                    player.inventory.cupsOfSugar += 20;
+                    break;
+                case 48:
+                    player.money -= 3.39;
+                    player.inventory.cupsOfSugar += 48;
+                    break;
+            }
         }
 
 

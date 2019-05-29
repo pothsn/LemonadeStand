@@ -93,6 +93,7 @@ namespace LemonadeStand
                 Console.WriteLine(player.name + " has $" + player.money);
                 store.SellPaperCups(player);
                 store.SellLemons(player);
+                store.SellCupsOfSugar(player);
 
 
 
