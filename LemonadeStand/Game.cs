@@ -92,6 +92,7 @@ namespace LemonadeStand
                 Console.WriteLine("Forecasted weather: " + day.weather.weatherForecast + "Temps: " + day.weather.temperatureForecast);
                 Console.WriteLine(player.name + " has $" + player.money);
                 store.SellPaperCups(player);
+                store.SellLemons(player);
 
 
 
