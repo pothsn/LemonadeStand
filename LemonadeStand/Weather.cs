@@ -8,7 +8,10 @@ namespace LemonadeStand
     {
         //member variables (HAS A)
         Random rng;
-        public string weather;
+        public string weatherForecast;
+        public string actualWeather;
+        public string temperatureForecast;
+        public string actualTemperature;
 
 
 
@@ -18,35 +21,59 @@ namespace LemonadeStand
             rng = new Random();
             GenerateWeatherForecast();
             GenerateTemperatureForecast();
+            GenerateActualWeather();
+            GenerateActualTemperature();
+
         }
 
         //member methods (CAN DO)
-        public string GenerateWeatherForecast()
+        private string GenerateWeatherForecast()
         {
             int weatherRoll = rng.Next(4);
             switch (weatherRoll)
             {
                 case 0:
-                    weather = "sunny";
+                    weatherForecast = "sunny";
                     break;
                 case 1:
-                    weather = "cloudy";
+                    weatherForecast = "cloudy";
                     break;
                 case 2:
-                    weather = "rainy";
+                    weatherForecast = "rainy";
                     break;
                 case 3:
-                    weather = "stormy";
+                    weatherForecast = "stormy";
                     break;
             }
-            return weather;
+            return weatherForecast;
         }
 
-        public int GenerateTemperatureForecast()
+        private int GenerateTemperatureForecast()
         {
-            int temperatureRoll = rng.Next(40, 90);
-            return temperatureRoll;
+            int temperatureForecast = rng.Next(40, 101);
+            return temperatureForecast;
         }
+
+        public void GenerateActualWeather()
+        {
+            int actualWeatherRoll = rng.Next(1, 11);
+            if(actualWeatherRoll >= 7)
+            {
+                actualWeather = "sunny";               
+            }
+            else
+            {
+                actualWeather = weatherForecast;
+            }
+        }
+
+        public void GenerateActualTemperature()
+        {
+            int actualTemperatureRoll = rng.Next(-4, 4);
+            actualTemperature = temperatureForecast + actualTemperatureRoll;
+        }
+
+
 
 
     }
