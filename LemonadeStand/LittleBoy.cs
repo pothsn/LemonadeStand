@@ -4,16 +4,18 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class OldWoman : Customer
+    public class LittleBoy : Customer
     {
         //member variables (HAS A)
 
         //constructor (SPAWNER)
-        public OldWoman()
+        public LittleBoy()
         {
-            pricePreference = .20;
+            pricePreference = .30;
+            lemonPreference = 6;
         }
 
         //member methods (CAN DO)
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LemonadeStand.Game">
-    <Position X="10.5" Y="2.5" Width="1.5" />
+    <Position X="10.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAACAAAQAAAAAAEAAAAAAAAQABACUECkAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
@@ -42,7 +42,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Player">
-    <Position X="10.5" Y="6" Width="1.5" />
+    <Position X="10.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAAYAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -67,38 +67,31 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Customer">
-    <Position X="3" Y="4.75" Width="1.75" />
+    <Position X="2.75" Y="5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAEAIAAAAAAAAAAAAAAAAgAAAQAAAQAAAgAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAQAAAggAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.OldWoman">
-    <Position X="6.25" Y="6.5" Width="1.5" />
+    <Position X="5.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OldWoman.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.OldMan">
-    <Position X="6.25" Y="4.5" Width="1.5" />
+    <Position X="5.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OldMan.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.YoungMan">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>YoungMan.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LemonadeStand.Child">
-    <Position X="0.5" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Child.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Pitcher">
@@ -106,6 +99,27 @@
     <TypeIdentifier>
       <HashCode>AgAAAAAEEAEAAAAAAAAAEAAAAAAAABAAEAAQAAAAAIA=</HashCode>
       <FileName>Pitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.YoungWoman">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>YoungWoman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.LittleBoy">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LittleBoy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.LittleGirl">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LittleGirl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

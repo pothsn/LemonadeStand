@@ -9,6 +9,10 @@ namespace LemonadeStand
         //member variables (HAS A)
 
         //constructor (SPAWNER)
+        public YoungMan()
+        {
+            lemonPreference = 5;
+        }
 
         //member methods (CAN DO)
     }

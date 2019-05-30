@@ -7,16 +7,20 @@ namespace LemonadeStand
     public class Customer
     {
         //member variables (HAS A)
-        public int money;
-        public string sugarPreference;
-        public string icePreference;
-        public string sourPreference;
-        public string temperatureInfluence;
-        public string weatherInfluence;
-        public string pricePreference;
-        
+        public double pricePreference;
+        public int sugarPreference;
+        public int icePreference;
+        public int lemonPreference;
+        public int temperatureInfluence;
 
         //constructor (SPAWNER)
+        public Customer()
+        {
+            pricePreference = .25;
+            sugarPreference = 4;
+            icePreference = 4;
+            lemonPreference = 4;
+        }
 
         //member methods (CAN DO)
 

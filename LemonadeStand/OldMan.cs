@@ -9,6 +9,10 @@ namespace LemonadeStand
         //member variables (HAS A)
 
         //constructor (SPAWNER)
+        public OldMan()
+        {
+            pricePreference = .19;
+        }
 
         //member methods (CAN DO)
     }
