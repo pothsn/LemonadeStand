@@ -16,6 +16,7 @@ namespace LemonadeStand
         //constructor (SPAWNER)
         public Day()
         {
+            customers = new List<Customer>();
             weather = new Weather();
             rng = new Random();
         }
@@ -25,7 +26,10 @@ namespace LemonadeStand
         {
             GetNummberOfCustomers();
             AdjustCustomersBasedOnTemperature();
-
+            for (int i = 0; i < numberOfCustomers; i++)
+            {
+                CreateCustomer();
+            }
         }
 
         public void GetNummberOfCustomers()
@@ -59,9 +63,38 @@ namespace LemonadeStand
             }
         }
 
-        public void createCustomer()
+        public void CreateCustomer()
         {
+            int customerTypeRoll = rng.Next(0, 7);
+            switch (customerTypeRoll)
+            {
+                case 1:
+                    YoungMan youngMan = new YoungMan();
+                    customers.Add(youngMan);
+                    break;
+                case 2:
+                    YoungWoman youngWoman = new YoungWoman();
+                    customers.Add(youngWoman);
+                    break;
+                case 3:
+                    LittleBoy littleBoy = new LittleBoy();
+                    customers.Add(littleBoy);
+                    break;
+                case 4:
+                    LittleGirl littleGirl = new LittleGirl();
+                    customers.Add(littleGirl);
+                    break;
+                case 5:
+                    OldWoman oldWoman = new OldWoman();
+                    customers.Add(oldWoman);
+                    break;
+                case 6:
+                    OldMan oldMan = new OldMan();
+                    customers.Add(oldMan);
+                    break;
 
+
+            }
         }
     }
 }
