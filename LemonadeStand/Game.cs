@@ -31,6 +31,7 @@ namespace LemonadeStand
             DisplayIntroduction();
             numberOfDays = UserPickDays();
             GenerateDays(numberOfDays);
+            GenerateCustomers();
             GeneratePlayerName();
             GameplayLoop();
         }
@@ -84,6 +85,18 @@ namespace LemonadeStand
                 days.Add(day);
             }
         }
+
+        public void GenerateCustomers()
+        {
+            foreach (Day day in days)
+            {
+                day.CreateCustomers();
+            }
+        }
+
+
+
+
 
         public void GeneratePlayerName()
         {

@@ -12,6 +12,7 @@ namespace LemonadeStand
         public YoungMan()
         {
             lemonPreference = 5;
+            customerId = 1;
         }
 
         //member methods (CAN DO)

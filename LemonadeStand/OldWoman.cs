@@ -12,6 +12,7 @@ namespace LemonadeStand
         public OldWoman()
         {
             pricePreference = .20;
+            customerId = 5;
         }
 
         //member methods (CAN DO)

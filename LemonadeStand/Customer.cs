@@ -12,6 +12,7 @@ namespace LemonadeStand
         public int icePreference;
         public int lemonPreference;
         public int temperatureInfluence;
+        public int customerId;
 
         //constructor (SPAWNER)
         public Customer()
