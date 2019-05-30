@@ -3,11 +3,10 @@
   <Class Name="LemonadeStand.Game">
     <Position X="10.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEBAAAAAAAQAAAAAAEAAAAAAAAQABACUECkAAAAA=</HashCode>
+      <HashCode>AAAAEAAAACAAAQAAAAAAEAAAAAAAAQABACUECkAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="userInterface" />
       <Field Name="store" />
       <Field Name="player" />
     </ShowAsAssociation>
@@ -18,7 +17,7 @@
   <Class Name="LemonadeStand.UserInterface">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,12 +44,12 @@
   <Class Name="LemonadeStand.Player">
     <Position X="10.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAEAAACAAAAAQAAEAE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAAYAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="inventory" />
-      <Property Name="Pitcher" />
+      <Field Name="pitcher" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Inventory">
@@ -105,7 +104,7 @@
   <Class Name="LemonadeStand.Pitcher">
     <Position X="15.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAEAAEAAAAAAAAAEAAAAAAAABAAEAAQAAAAAIA=</HashCode>
+      <HashCode>AgAAAAAEEAEAAAAAAAAAEAAAAAAAABAAEAAQAAAAAIA=</HashCode>
       <FileName>Pitcher.cs</FileName>
     </TypeIdentifier>
   </Class>

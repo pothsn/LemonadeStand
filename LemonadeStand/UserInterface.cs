@@ -4,12 +4,12 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class UserInterface
+    public static class UserInterface
     {
         //member variables (HAS A)
 
         //constructor (SPAWNER)
-        public UserInterface()
+        static UserInterface()
         {
 
 
@@ -19,7 +19,13 @@ namespace LemonadeStand
         }
 
         //member methods (CAN DO)
-
+        public static string GetInput(String output)
+        {
+            Console.WriteLine(output);
+            string input = Console.ReadLine();
+            return input;
+        }
+        //UserInterface.GetInput("Writeline goes here.");
 
     }
 }

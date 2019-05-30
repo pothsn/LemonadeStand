@@ -20,25 +20,16 @@ namespace LemonadeStand
             pitcher = new Pitcher();
         }
 
-        public Recipe Recipe
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Pitcher Pitcher
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-
         //member methods (CAN DO)
 
+        public void SellCup()
+        {
+            if (true)
+            {
+                pitcher.PourCup(inventory);
+                money += pitcher.cupPrice;
+            }
+        }
 
     }
 }

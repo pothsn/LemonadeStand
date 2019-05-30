@@ -25,9 +25,28 @@ namespace LemonadeStand
         }
 
         //member methods (CAN DO)
-        public void FillPitcher(Player player)
+        
+
+        public void AdjustPriceAndQuality()
         {
-            if(player.inventory.cupsOfSugar >= cupsOfSugar && player.inventory.iceCubes >= iceCubes && player.inventory.lemons >= lemons && player.inventory.paperCups > 0)
+            Console.WriteLine("Enter new value for cups of sugar per pitcher.");
+            cupsOfSugar = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter new value for ice cubes per pitcher.");
+            iceCubes = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter new value for lemons per pitcher.");
+            lemons = int.Parse(Console.ReadLine());
+        }
+
+
+
+
+
+
+
+
+        public void FillPitcher(Inventory inventory)
+        {
+            if(inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
             {
                 cupsInPitcher = 11;
             }
@@ -38,28 +57,19 @@ namespace LemonadeStand
 
         }
 
-        public void PourCup(Player player)
+        public void PourCup(Inventory inventory)
         {
-            if(cupsInPitcher > 0)
+            if (cupsInPitcher > 0)
             {
                 cupsInPitcher--;
                 cupsSold++;
-                player.money += cupPrice;
             }
             else
             {
-                FillPitcher(player);
+                FillPitcher(inventory);
+
             }
+
         }
-
-
-
-
-
-
-
-
-
-
     }
 }
