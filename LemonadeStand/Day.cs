@@ -65,36 +65,33 @@ namespace LemonadeStand
 
         public void CreateCustomer()
         {
+            Customer customer;
             int customerTypeRoll = rng.Next(0, 7);
             switch (customerTypeRoll)
             {
                 case 1:
-                    YoungMan youngMan = new YoungMan();
-                    customers.Add(youngMan);
+                    customer = new YoungMan();
                     break;
                 case 2:
-                    YoungWoman youngWoman = new YoungWoman();
-                    customers.Add(youngWoman);
+                    customer = new YoungWoman();
                     break;
                 case 3:
-                    LittleBoy littleBoy = new LittleBoy();
-                    customers.Add(littleBoy);
+                    customer = new LittleBoy();
                     break;
                 case 4:
-                    LittleGirl littleGirl = new LittleGirl();
-                    customers.Add(littleGirl);
+                    customer = new LittleGirl();
                     break;
                 case 5:
-                    OldWoman oldWoman = new OldWoman();
-                    customers.Add(oldWoman);
+                    customer = new OldWoman();
                     break;
                 case 6:
-                    OldMan oldMan = new OldMan();
-                    customers.Add(oldMan);
+                    customer = new OldMan();
                     break;
-
-
+                default:
+                    customer = new OldWoman();
+                    break;
             }
+            customers.Add(customer);
         }
     }
 }
