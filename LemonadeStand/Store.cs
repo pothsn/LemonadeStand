@@ -7,7 +7,6 @@ namespace LemonadeStand
     public class Store
     {
         //member variables (HAS A)
-        //public Player player;
         public double paperCupsPrice; 
         public double lemonsPrice;
         public double cupsOfSugarPrice;

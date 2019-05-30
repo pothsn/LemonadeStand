@@ -3,7 +3,7 @@
   <Class Name="LemonadeStand.Game">
     <Position X="10.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEBAAAAAAAQAAAAAAAAAAAAAAAQABACwACGAAAAA=</HashCode>
+      <HashCode>AAAAEBAAAAAAAQAAAAAAEAAAAAAAAQABACUECkAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -45,24 +45,25 @@
   <Class Name="LemonadeStand.Player">
     <Position X="10.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAEAAACAAAAAQAAEAE=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="inventory" />
+      <Property Name="Pitcher" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Inventory">
-    <Position X="14.75" Y="5.25" Width="1.5" />
+    <Position X="13.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAEIA=</HashCode>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAIA=</HashCode>
       <FileName>Inventory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Store">
     <Position X="13.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAACAACAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAIAA=</HashCode>
+      <HashCode>AEAAACAACAAAAEAAAAEAAAAAAAAAAAAAAAgABAAAIAA=</HashCode>
       <FileName>Store.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -99,6 +100,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Child.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Pitcher">
+    <Position X="15.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAAEAAAAAAAAAEAAAAAAAABAAEAAQAAAAAIA=</HashCode>
+      <FileName>Pitcher.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

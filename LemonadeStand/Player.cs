@@ -10,11 +10,30 @@ namespace LemonadeStand
         public double money;
         public Inventory inventory;
         public string name;
+        public Pitcher pitcher;
 
         //constructor (SPAWNER)
         public Player()
         {
             money = 20.00;
+            inventory = new Inventory();
+            pitcher = new Pitcher();
+        }
+
+        public Recipe Recipe
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Pitcher Pitcher
+        {
+            get => default;
+            set
+            {
+            }
         }
 
 
