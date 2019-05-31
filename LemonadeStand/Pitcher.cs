@@ -12,21 +12,17 @@ namespace LemonadeStand
         public int lemons;
         public int cupsInPitcher;
         public double cupPrice;
-        public int cupsSold;
-
 
         //constructor (SPAWNER)
         public Pitcher()
         {
+            cupPrice = .25;
             cupsOfSugar = 4;
             iceCubes = 4;
-            lemons = 4;
-            cupPrice = .25;
+            lemons = 4;           
         }
 
         //member methods (CAN DO)
-        
-
         public void AdjustPriceAndQuality()
         {
             Console.WriteLine("Enter new value for cups of sugar per pitcher.");
@@ -36,13 +32,6 @@ namespace LemonadeStand
             Console.WriteLine("Enter new value for lemons per pitcher.");
             lemons = int.Parse(Console.ReadLine());
         }
-
-
-
-
-
-
-
 
         public void FillPitcher(Inventory inventory)
         {
@@ -62,7 +51,6 @@ namespace LemonadeStand
             if (cupsInPitcher > 0)
             {
                 cupsInPitcher--;
-                cupsSold++;
             }
             else
             {

@@ -26,7 +26,7 @@ namespace LemonadeStand
         {
             GetNummberOfCustomers();
             AdjustCustomersBasedOnTemperature();
-            for (int i = 0; i < numberOfCustomers; i++)
+            for (int i = 0; i <= numberOfCustomers; i++)
             {
                 CreateCustomer();
             }
@@ -88,7 +88,7 @@ namespace LemonadeStand
                     customer = new OldMan();
                     break;
                 default:
-                    customer = new OldWoman();
+                    customer = new OldMan();
                     break;
             }
             customers.Add(customer);

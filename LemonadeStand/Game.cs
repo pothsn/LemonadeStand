@@ -51,6 +51,7 @@ namespace LemonadeStand
                 Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");
                 Console.ReadLine();
                 DetermineIfAdjustPriceAndQuality();
+                RunSales();
                 
 
 
@@ -136,8 +137,17 @@ namespace LemonadeStand
                     break;
 
             }
-                
-                
+        }
+
+        public void RunSales()
+        {
+            foreach (Customer customer in days[currentDay].customers)
+            {
+                if (player.pitcher.cupPrice <= customer.pricePreference && player.pitcher.cupsOfSugar >= customer.sugarPreference && player.pitcher.iceCubes >= customer.icePreference && player.pitcher.lemons >= customer.lemonPreference)
+                {
+                    player.SellCup();
+                }
+            }
 
 
 
