@@ -11,6 +11,7 @@ namespace LemonadeStand
         public double lemonsPrice;
         public double cupsOfSugarPrice;
         public double iceCubesPrice;
+        public double playerDailyInvestment;
                 
         //constructor (SPAWNER)
         public Store()
@@ -34,14 +35,17 @@ namespace LemonadeStand
                 case 25:
                     player.money -= paperCupsPrice;
                     player.inventory.paperCups += 25;
+                    playerDailyInvestment += paperCupsPrice;
                     break;
                 case 50:
                     player.money -= 1.60;
                     player.inventory.paperCups += 100;
+                    playerDailyInvestment += 1.60;
                     break;
                 case 100:
                     player.money -= 3.22;
                     player.inventory.paperCups += 100;
+                    playerDailyInvestment += 3.22;
                     break;
             }
         }
@@ -57,14 +61,17 @@ namespace LemonadeStand
                 case 10:
                     player.money -= lemonsPrice;
                     player.inventory.lemons += 10;
+                    playerDailyInvestment += lemonsPrice;
                     break;
                 case 30:
                     player.money -= 2.40;
                     player.inventory.lemons += 30;
+                    playerDailyInvestment += 2.40;
                     break;
                 case 75:
                     player.money -= 4.13;
                     player.inventory.lemons += 75;
+                    playerDailyInvestment += 4.13;
                     break;
             }
         }
@@ -80,14 +87,17 @@ namespace LemonadeStand
                 case 8:
                     player.money -= cupsOfSugarPrice;
                     player.inventory.cupsOfSugar += 8;
+                    playerDailyInvestment += cupsOfSugarPrice;
                     break;
                 case 20:
                     player.money -= 1.51;
                     player.inventory.cupsOfSugar += 20;
+                    playerDailyInvestment += 1.51;
                     break;
                 case 48:
                     player.money -= 3.39;
                     player.inventory.cupsOfSugar += 48;
+                    playerDailyInvestment += 3.39;
                     break;
             }
         }
@@ -103,14 +113,17 @@ namespace LemonadeStand
                 case 100:
                     player.money -= iceCubesPrice;
                     player.inventory.iceCubes += 100;
+                    playerDailyInvestment += iceCubesPrice;
                     break;
                 case 250:
                     player.money -= 2.08;
                     player.inventory.iceCubes += 250;
+                    playerDailyInvestment += 2.08;
                     break;
                 case 500:
                     player.money -= 3.61;
                     player.inventory.iceCubes += 500;
+                    playerDailyInvestment += 3.61;
                     break;
             }
         }

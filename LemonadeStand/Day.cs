@@ -11,7 +11,8 @@ namespace LemonadeStand
         public Weather weather;
         Random rng;
         int numberOfCustomers;
-        
+        public double dailyProfit;
+
 
         //constructor (SPAWNER)
         public Day()

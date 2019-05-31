@@ -12,7 +12,7 @@ namespace LemonadeStand
         public List<Day> days;
         public int currentDay;
         public int numberOfDays;
-
+        public double totalProfit;
 
         //constructor (SPAWNER)
         public Game()
@@ -48,19 +48,12 @@ namespace LemonadeStand
                 store.SellLemons(player);
                 store.SellCupsOfSugar(player);
                 store.SellIceCubes(player);
-                Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");
+                Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes\n" + "$" + player.money + " remaining" + "\nPress Enter to continue.");
                 Console.ReadLine();
                 DetermineIfAdjustPriceAndQuality();
                 RunSales();
-                
-
-
-
-
-
-
-
                 currentDay++;
+                store.playerDailyInvestment = 0;
             }
         }
 
@@ -95,10 +88,6 @@ namespace LemonadeStand
             }
         }
 
-
-
-
-
         public void GeneratePlayerName()
         {
             Console.WriteLine("Enter player name.");
@@ -112,7 +101,6 @@ namespace LemonadeStand
             {
                 Console.WriteLine("Day " + i + ": " + days[i].weather.weatherForecast);
             }
-
         }
 
         public void DisplayAllTemperatureForecasts()
@@ -135,7 +123,6 @@ namespace LemonadeStand
                     break;
                 case "no":
                     break;
-
             }
         }
 
@@ -146,11 +133,22 @@ namespace LemonadeStand
                 if (player.pitcher.cupPrice <= customer.pricePreference && player.pitcher.cupsOfSugar >= customer.sugarPreference && player.pitcher.iceCubes >= customer.icePreference && player.pitcher.lemons >= customer.lemonPreference)
                 {
                     player.SellCup();
+                    days[currentDay].dailyProfit += player.pitcher.cupPrice;
                 }
             }
-            Console.WriteLine(player.name + " sold " + player.cupsSold + " cups and made " + player.dailySales);
+            days[currentDay].dailyProfit -= store.playerDailyInvestment;
+            Console.WriteLine(player.name + " sold " + " cups." + player.dailySales + ".\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
             Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");
             Console.ReadLine();
+        }
+
+
+        public double CalculateTotalProfit()
+        {
+
+            totalProfit += days[currentDay].dailyProfit;
+            return totalProfit;
+            
         }
     }
 }

@@ -29,7 +29,6 @@ namespace LemonadeStand
             if (pitcher.CheckPitcher(inventory))
             {
                 money += pitcher.cupPrice;
-                dailySales += pitcher.cupPrice;
                 inventory.paperCups--;
                 cupsSold++;
             }
