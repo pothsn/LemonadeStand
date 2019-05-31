@@ -137,7 +137,9 @@ namespace LemonadeStand
                 }
             }
             days[currentDay].dailyProfit -= store.playerDailyInvestment;
-            Console.WriteLine(player.name + " sold " + " cups." + player.dailySales + ".\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
+            Console.WriteLine(player.name + " sold " + player.cupsSold + " cups." + ".\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
+            player.inventory.iceCubes = 0;
+            Console.WriteLine("Your ice melted!");
             Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");
             Console.ReadLine();
         }
