@@ -30,6 +30,7 @@ namespace LemonadeStand
             {
                 money += pitcher.cupPrice;
                 dailySales += pitcher.cupPrice;
+                inventory.paperCups--;
                 cupsSold++;
             }
             else

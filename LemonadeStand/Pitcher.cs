@@ -40,6 +40,9 @@ namespace LemonadeStand
                 if (inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
                 {
                     cupsInPitcher = 11;
+                    inventory.cupsOfSugar -= cupsOfSugar;
+                    inventory.iceCubes -= iceCubes;
+                    inventory.lemons -= lemons;
                 }
                 else
                 {
