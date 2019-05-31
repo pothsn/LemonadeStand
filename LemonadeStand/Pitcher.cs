@@ -33,31 +33,28 @@ namespace LemonadeStand
             lemons = int.Parse(Console.ReadLine());
         }
 
-        public void FillPitcher(Inventory inventory)
+        public bool CheckPitcher(Inventory inventory)
         {
-            if(inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
+            while (cupsInPitcher < 1)
             {
-                cupsInPitcher = 11;
+                if (inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
+                {
+                    cupsInPitcher = 11;
+                }
+                else
+                {
+                    break;
+                }
             }
-            else
-            {
-                Console.WriteLine("Out of ingredients!");
-            }
-
-        }
-
-        public void PourCup(Inventory inventory)
-        {
             if (cupsInPitcher > 0)
             {
                 cupsInPitcher--;
+                return true;
             }
             else
             {
-                FillPitcher(inventory);
-
+                return false;
             }
-
         }
     }
 }

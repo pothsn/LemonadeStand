@@ -148,13 +148,9 @@ namespace LemonadeStand
                     player.SellCup();
                 }
             }
-
-
-
-
-
-
-
+            Console.WriteLine(player.name + " sold " + player.cupsSold + " cups and made " + player.dailySales);
+            Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");
+            Console.ReadLine();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace LemonadeStand
         public string name;
         public Pitcher pitcher;
         public int cupsSold;
+        public double dailySales;
 
         //constructor (SPAWNER)
         public Player()
@@ -25,9 +26,16 @@ namespace LemonadeStand
 
         public void SellCup()
         {
-            pitcher.PourCup(inventory);
-            money += pitcher.cupPrice;
-            cupsSold++;
+            if (pitcher.CheckPitcher(inventory))
+            {
+                money += pitcher.cupPrice;
+                dailySales += pitcher.cupPrice;
+                cupsSold++;
+            }
+            else
+            {
+                Console.WriteLine("Out of ingredients!");
+            }
         }
 
     }
