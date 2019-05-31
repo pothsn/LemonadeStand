@@ -18,7 +18,7 @@ namespace LemonadeStand
         public Game()
         {
             days = new List<Day>();
-            currentDay = 1;
+            currentDay = 0;
             player = new Player();
             store = new Store();
         }
@@ -34,13 +34,15 @@ namespace LemonadeStand
             GenerateCustomers();
             GeneratePlayerName();
             GameplayLoop();
+            Console.WriteLine("Game over! Your total profit was " + totalProfit + ".");
+            RunGame();
         }
 
         public void GameplayLoop()
         {
             foreach (Day day in days)
             {
-                Console.WriteLine("Day: " + currentDay + "\nToday's weather: " + day.weather.actualWeather + "\n" + "Today's temperature: " + day.weather.actualTemperature);
+                Console.WriteLine("Day: " + (currentDay + 1) + "\nToday's weather: " + day.weather.actualWeather + "\n" + "Today's temperature: " + day.weather.actualTemperature);
                 DisplayAllWeatherForecasts();
                 DisplayAllTemperatureForecasts();
                 Console.WriteLine(player.name + " has $" + player.money);
@@ -100,7 +102,7 @@ namespace LemonadeStand
             Console.WriteLine("Weather forecast:");
             for (int i = currentDay; i < numberOfDays; i++)
             {
-                Console.WriteLine("Day " + i + ": " + days[i].weather.weatherForecast);
+                Console.WriteLine("Day " + (i + 1) + ": " + days[i].weather.weatherForecast);
             }
         }
 
@@ -109,13 +111,13 @@ namespace LemonadeStand
             Console.WriteLine("Temperature forecast:");
             for (int i = currentDay; i < numberOfDays; i++)
             {
-                Console.WriteLine("Day " + i + ": " + days[i].weather.temperatureForecast);
+                Console.WriteLine("Day " + (i + 1) + ": " + days[i].weather.temperatureForecast);
             }
         }
 
         public void DetermineIfAdjustPriceAndQuality()
         {
-            Console.WriteLine("Current price:\n" + player.pitcher.cupPrice + "\n" + "Current recipe:\n" + player.pitcher.cupsOfSugar + " Cups of sugar" + "\n" + player.pitcher.iceCubes + " ice cubes" + "\n" + player.pitcher.lemons + "lemons" + "\n" + "Would you like to adjust it? Enter yes or no.");
+            Console.WriteLine("Current price:\n" + player.pitcher.cupPrice + "\n" + "Current recipe:\n" + player.pitcher.cupsOfSugar + " Cups of sugar" + "\n" + player.pitcher.iceCubes + " ice cubes" + "\n" + player.pitcher.lemons + " lemons" + "\n" + "Would you like to adjust it? Enter yes or no.");
             string yesNo = Console.ReadLine().ToLower();
             switch (yesNo)
             {

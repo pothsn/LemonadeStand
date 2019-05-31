@@ -39,7 +39,7 @@ namespace LemonadeStand
                     break;
                 case 50:
                     player.money -= 1.60;
-                    player.inventory.paperCups += 100;
+                    player.inventory.paperCups += 50;
                     playerDailyInvestment += 1.60;
                     break;
                 case 100:
