@@ -22,21 +22,58 @@ namespace LemonadeStand
             pitcher = new Pitcher();
         }
 
-        //member methods (CAN DO)
+        //member methods(CAN DO)
+
+        //public void SellCup()
+        //{
+        //    if (pitcher.CheckPitcher(inventory))
+        //    {
+        //        money += pitcher.cupPrice;
+        //        cupsSold++;
+        //        inventory.paperCups--;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Out of ingredients!");
+        //    }
+        //}
 
         public void SellCup()
         {
-            if (pitcher.CheckPitcher(inventory))
+            
+            if (pitcher.CheckPitcher(inventory) == true)
             {
-                money += pitcher.cupPrice;
-                inventory.paperCups--;
-                cupsSold++;
+                PourCup();
             }
-            else
+            if (pitcher.CheckPitcher(inventory) == false)
             {
-                Console.WriteLine("Out of ingredients!");
+                if (pitcher.CheckIfCanRefillPitcher(inventory) == true)
+                {
+                    RefillPitcher(inventory);
+                }
             }
         }
+
+        public void PourCup()
+        {
+            pitcher.cupsInPitcher--;
+            inventory.paperCups--;
+            money += pitcher.cupPrice;
+            cupsSold++;
+        }
+
+        public void RefillPitcher(Inventory inventory)
+        {
+            pitcher.cupsInPitcher = 11;
+            inventory.cupsOfSugar -= pitcher.cupsOfSugar;
+            inventory.iceCubes -= pitcher.iceCubes;
+            inventory.lemons -= pitcher.lemons;
+        }
+
+
+
+
+
 
     }
 }

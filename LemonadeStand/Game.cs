@@ -53,6 +53,7 @@ namespace LemonadeStand
                 DetermineIfAdjustPriceAndQuality();
                 RunSales();
                 currentDay++;
+                player.cupsSold = 0;
                 store.playerDailyInvestment = 0;
             }
         }
@@ -114,7 +115,7 @@ namespace LemonadeStand
 
         public void DetermineIfAdjustPriceAndQuality()
         {
-            Console.WriteLine("Current recipe:\n" + player.pitcher.cupsOfSugar + " Cups of sugar" + "\n" + player.pitcher.iceCubes + " ice cubes" + "\n" + player.pitcher.lemons + "lemons" + "\n" + "Would you like to adjust it? Enter yes or no.");
+            Console.WriteLine("Current price:\n" + player.pitcher.cupPrice + "\n" + "Current recipe:\n" + player.pitcher.cupsOfSugar + " Cups of sugar" + "\n" + player.pitcher.iceCubes + " ice cubes" + "\n" + player.pitcher.lemons + "lemons" + "\n" + "Would you like to adjust it? Enter yes or no.");
             string yesNo = Console.ReadLine().ToLower();
             switch (yesNo)
             {
@@ -135,9 +136,14 @@ namespace LemonadeStand
                     player.SellCup();
                     days[currentDay].dailyProfit += player.pitcher.cupPrice;
                 }
+                else if(player.pitcher.CheckIfCanRefillPitcher(player.inventory) == false && player.pitcher.cupsInPitcher == 0)
+                {
+                    Console.WriteLine("Out of supplies!");
+                    break;
+                }
             }
             days[currentDay].dailyProfit -= store.playerDailyInvestment;
-            Console.WriteLine(player.name + " sold " + player.cupsSold + " cups." + ".\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
+            Console.WriteLine(player.name + " sold " + player.cupsSold + " cups." + "\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
             player.inventory.iceCubes = 0;
             Console.WriteLine("Your ice melted!");
             Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");

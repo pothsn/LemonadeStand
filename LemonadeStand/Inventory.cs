@@ -12,14 +12,9 @@ namespace LemonadeStand
         public int lemons;
         public int paperCups;
 
-
-
         //constructor (SPAWNER)
 
-
         //member methods (CAN DO)
-
-
 
     }
 }

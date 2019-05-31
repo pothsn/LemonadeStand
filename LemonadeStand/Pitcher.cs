@@ -25,6 +25,8 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void AdjustPriceAndQuality()
         {
+            Console.WriteLine("Enter a new price for a cup of lemonade.");
+            cupPrice = double.Parse(Console.ReadLine());
             Console.WriteLine("Enter new value for cups of sugar per pitcher.");
             cupsOfSugar = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter new value for ice cubes per pitcher.");
@@ -33,25 +35,43 @@ namespace LemonadeStand
             lemons = int.Parse(Console.ReadLine());
         }
 
+        //public bool CheckPitcher(Inventory inventory)
+        //{
+        //    if (cupsInPitcher < 1)
+        //    {
+        //        if (inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
+        //        {
+        //            cupsInPitcher = 11;
+        //            inventory.cupsOfSugar -= cupsOfSugar;
+        //            inventory.iceCubes -= iceCubes;
+        //            inventory.lemons -= lemons;
+        //        }
+        //    }
+        //    if (cupsInPitcher >= 1 )
+        //    {
+        //        cupsInPitcher--;
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
         public bool CheckPitcher(Inventory inventory)
         {
-            while (cupsInPitcher < 1)
-            {
-                if (inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
-                {
-                    cupsInPitcher = 11;
-                    inventory.cupsOfSugar -= cupsOfSugar;
-                    inventory.iceCubes -= iceCubes;
-                    inventory.lemons -= lemons;
-                }
-                else
-                {
-                    break;
-                }
-            }
             if (cupsInPitcher > 0)
+                return true;
+            else
             {
-                cupsInPitcher--;
+                return false;
+            }
+        }
+
+        public bool CheckIfCanRefillPitcher(Inventory inventory)
+        {
+            if (inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
+            {
                 return true;
             }
             else
@@ -59,5 +79,8 @@ namespace LemonadeStand
                 return false;
             }
         }
+
+
+
     }
 }
