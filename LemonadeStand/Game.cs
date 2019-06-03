@@ -46,9 +46,14 @@ namespace LemonadeStand
         {
             foreach (Day day in days)
             {
-                Console.WriteLine("Day: " + (currentDay + 1) + "\nToday's weather: " + day.weather.actualWeather + "\n" + "Today's temperature: " + day.weather.actualTemperature);
+                Console.WriteLine("Day: " + (currentDay + 1));
+                Console.WriteLine("Today's weather: " + day.weather.actualWeather);
+                Console.WriteLine("Today's temperature: " + day.weather.actualTemperature);
+                Console.WriteLine();
                 DisplayAllWeatherForecasts();
+                Console.WriteLine();
                 DisplayAllTemperatureForecasts();
+                Console.WriteLine();
                 Console.WriteLine(player.name + " has $" + player.money);
                 store.SellPaperCups(player);
                 store.SellLemons(player);
@@ -57,6 +62,7 @@ namespace LemonadeStand
                 Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes\n" + "$" + player.money + " remaining" + "\nPress Enter to continue.");
                 Console.ReadLine();
                 DetermineIfAdjustPriceAndQuality();
+                Console.WriteLine();
                 RunSales();
                 currentDay++;
                 player.cupsSold = 0;
