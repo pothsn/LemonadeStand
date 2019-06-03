@@ -69,8 +69,22 @@ namespace LemonadeStand
         public int UserPickDays()
         {
             Console.WriteLine("How many days would you like to play? Enter 7, 14, or 30.");
-            int days = int.Parse(Console.ReadLine());
-            return days;
+            try
+            {
+                int days = int.Parse(Console.ReadLine());
+                if (days == 7 || days == 14 || days == 30)
+                {
+                    return days;
+                }
+                else
+                {
+                    return UserPickDays();
+                }
+            }
+            catch
+            {
+                return UserPickDays();
+            }
         }
 
         public void GenerateDays(int numberOfDays)
