@@ -23,7 +23,6 @@ namespace LemonadeStand
         }
 
         //member methods(CAN DO)
-
         public void SellCup()
         {            
             if (pitcher.CheckPitcher(inventory) == true)

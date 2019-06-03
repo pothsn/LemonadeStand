@@ -73,7 +73,7 @@ namespace LemonadeStand
 
         public void DisplayIntroduction()
         {
-            Console.WriteLine("This is where I will insert a brief introduction describing the game etc. Press Enter to continue.");
+            Console.WriteLine("Welcome to Lemonade Stand! Buy supplies for your lemonade stand, adjust your recipe and try to make the most profit. Press Enter to continue.");
             Console.ReadLine();
         }
 

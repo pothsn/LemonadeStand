@@ -1,0 +1,30 @@
+(10 points (5 points each)): 
+As a developer, I want to pinpoint at least two places 
+where I used one of the SOLID design principles and discuss 
+my reasoning, so that I can properly understand good code design.
+Minimum of two SOLID design principles must be used. 
+
+1. Single Responsibility
+In Player.cs, I used the single responsibility principle 
+with SellCUp member method and the four other member methods
+it calls upon: CheckPitcher, PourCup, CheckIfCanRefillPitcher and RefillPitcher.
+
+These methods are designed to be simple, doing one thing only and doing it well.
+
+SellCup's job is to sell the cup, simply and efficiently by calling 4 other 
+single responsibility member methods. 
+
+CheckPitcher determines if there are any cups of lemonade in the pitcher.
+PourCup pours a cup of lemonade from the pitcher.
+CheckIfCanRefillPitcher checks inventory and determines if pitcher can be refilled.
+Refill pitcher refills the pitcher with lemonade.
+
+
+
+2. Liskov's Substitution Principle
+Customer.cs is the parent class of six child classes:
+YoungMan, YoungWoman, LittleBoy, OldMan, OldWoman, LittleBoy and LittleGirl.
+
+The child classes are designed so they could be used in the exact same way
+as the parent class and vise versa. They are made of the same parts and have
+no extra variables or methods.
