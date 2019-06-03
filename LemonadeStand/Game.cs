@@ -182,7 +182,7 @@ namespace LemonadeStand
                     player.SellCup();
                     days[currentDay].dailyProfit += player.pitcher.cupPrice;
                 }
-                else if(player.pitcher.CheckIfCanRefillPitcher(player.inventory) == false || player.pitcher.cupsInPitcher == 0)
+                if (player.pitcher.CheckIfCanRefillPitcher(player.inventory) == false && player.pitcher.cupsInPitcher == 0 || player.inventory.paperCups < 1)
                 {
                     Console.WriteLine("Out of supplies!");
                     break;
@@ -192,9 +192,9 @@ namespace LemonadeStand
             Console.WriteLine(player.name + " sold " + player.cupsSold + " cups." + "\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
             player.inventory.iceCubes = 0;
             Console.WriteLine();
-            Console.WriteLine("Your ice melted!");
+            Console.WriteLine("Your ice melted and any lemonade remaining in the pitcher has been poured out.");
             Console.WriteLine();
-            Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\n\nPress Enter to continue.");
+            Console.WriteLine(player.name + " has:\n" + "Money: " + player.money + "\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes\n" + "$" + player.money + " remaining" + "\nPress Enter to continue.");
             Console.ReadLine();
         }
 
