@@ -53,11 +53,5 @@ namespace LemonadeStand
             inventory.iceCubes -= pitcher.iceCubes;
             inventory.lemons -= pitcher.lemons;
         }
-
-
-
-
-
-
     }
 }

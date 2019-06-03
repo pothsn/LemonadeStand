@@ -23,11 +23,9 @@ namespace LemonadeStand
             store = new Store();
         }
 
-
         //member methods (CAN DO)
         public void RunGame()
         {
-
             DisplayIntroduction();
             numberOfDays = UserPickDays();
             GenerateDays(numberOfDays);
@@ -162,7 +160,6 @@ namespace LemonadeStand
                         Console.WriteLine("Invalid input!");
                         DetermineIfAdjustPriceAndQuality();
                         break;
-
                 }
             }
             catch
@@ -197,7 +194,6 @@ namespace LemonadeStand
             Console.WriteLine(player.name + " has:\n" + "Money: " + player.money + "\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes\n" + "$" + player.money + " remaining" + "\nPress Enter to continue.");
             Console.ReadLine();
         }
-
 
         public double CalculateTotalProfit()
         {
