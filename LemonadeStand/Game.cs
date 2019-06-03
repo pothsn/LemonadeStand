@@ -59,7 +59,7 @@ namespace LemonadeStand
                 store.SellLemons(player);
                 store.SellCupsOfSugar(player);
                 store.SellIceCubes(player);
-                Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes\n" + "$" + player.money + " remaining" + "\nPress Enter to continue.");
+                Console.WriteLine(player.name + " has:\n" + "Money: " + player.money + "\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes\n" + "$" + player.money + " remaining" + "\nPress Enter to continue.");
                 Console.ReadLine();
                 DetermineIfAdjustPriceAndQuality();
                 Console.WriteLine();
@@ -67,6 +67,7 @@ namespace LemonadeStand
                 currentDay++;
                 player.cupsSold = 0;
                 store.playerDailyInvestment = 0;
+                player.pitcher.cupsInPitcher = 0;
             }
         }
 

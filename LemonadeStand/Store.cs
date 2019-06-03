@@ -51,6 +51,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellPaperCups(player);
                                 break;
                             }
                         case 50:
@@ -66,6 +67,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellPaperCups(player);
                                 break;
                             }
                         case 100:
@@ -81,6 +83,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellPaperCups(player);
                                 break;
                             }
                     }
@@ -126,6 +129,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellLemons(player);
                                 break;
                             }
                         case 30:
@@ -141,6 +145,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellLemons(player);
                                 break;
                             }
                         case 75:
@@ -156,6 +161,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellLemons(player);
                                 break;
                             }
                     }
@@ -201,6 +207,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellCupsOfSugar(player);
                                 break;
                             }
                         case 20:
@@ -216,6 +223,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellCupsOfSugar(player);
                                 break;
                             }
                         case 48:
@@ -231,6 +239,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellCupsOfSugar(player);
                                 break;
                             }
                     }
@@ -276,6 +285,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellIceCubes(player);
                                 break;
                             }
                         case 250:
@@ -291,6 +301,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellIceCubes(player);
                                 break;
                             }
                         case 500:
@@ -306,6 +317,7 @@ namespace LemonadeStand
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("Not enough money!");
+                                SellIceCubes(player);
                                 break;
                             }
                     }
