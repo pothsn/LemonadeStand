@@ -39,23 +39,50 @@ namespace LemonadeStand
                             Console.WriteLine();
                             break;
                         case 25:
-                            Console.WriteLine();
-                            player.money -= paperCupsPrice;
-                            player.inventory.paperCups += 25;
-                            playerDailyInvestment += paperCupsPrice;
-                            break;
+                            if (player.money >= paperCupsPrice)
+                            {
+                                Console.WriteLine();
+                                player.money -= paperCupsPrice;
+                                player.inventory.paperCups += 25;
+                                playerDailyInvestment += paperCupsPrice;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 50:
-                            Console.WriteLine();
-                            player.money -= 1.60;
-                            player.inventory.paperCups += 50;
-                            playerDailyInvestment += 1.60;
-                            break;
+                            if (player.money >= 1.60)
+                            {
+                                Console.WriteLine();
+                                player.money -= 1.60;
+                                player.inventory.paperCups += 50;
+                                playerDailyInvestment += 1.60;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 100:
-                            Console.WriteLine();
-                            player.money -= 3.22;
-                            player.inventory.paperCups += 100;
-                            playerDailyInvestment += 3.22;
-                            break;
+                            if (player.money >= 3.22)
+                            {
+                                Console.WriteLine();
+                                player.money -= 3.22;
+                                player.inventory.paperCups += 100;
+                                playerDailyInvestment += 3.22;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                     }
                 }
                 else
@@ -87,23 +114,50 @@ namespace LemonadeStand
                             Console.WriteLine();
                             break;
                         case 10:
-                            Console.WriteLine();
-                            player.money -= lemonsPrice;
-                            player.inventory.lemons += 10;
-                            playerDailyInvestment += lemonsPrice;
-                            break;
+                            if (player.money >= lemonsPrice)
+                            {
+                                Console.WriteLine();
+                                player.money -= lemonsPrice;
+                                player.inventory.lemons += 10;
+                                playerDailyInvestment += lemonsPrice;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 30:
-                            Console.WriteLine();
-                            player.money -= 2.40;
-                            player.inventory.lemons += 30;
-                            playerDailyInvestment += 2.40;
-                            break;
+                            if (player.money >= 2.40)
+                            {
+                                Console.WriteLine();
+                                player.money -= 2.40;
+                                player.inventory.lemons += 30;
+                                playerDailyInvestment += 2.40;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 75:
-                            Console.WriteLine();
-                            player.money -= 4.13;
-                            player.inventory.lemons += 75;
-                            playerDailyInvestment += 4.13;
-                            break;
+                            if (player.money >= 4.13)
+                            {
+                                Console.WriteLine();
+                                player.money -= 4.13;
+                                player.inventory.lemons += 75;
+                                playerDailyInvestment += 4.13;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                     }
                 }
                 else
@@ -135,23 +189,50 @@ namespace LemonadeStand
                             Console.WriteLine();
                             break;
                         case 8:
-                            Console.WriteLine();
-                            player.money -= cupsOfSugarPrice;
-                            player.inventory.cupsOfSugar += 8;
-                            playerDailyInvestment += cupsOfSugarPrice;
-                            break;
+                            if (player.money >= cupsOfSugarPrice)
+                            {
+                                Console.WriteLine();
+                                player.money -= cupsOfSugarPrice;
+                                player.inventory.cupsOfSugar += 8;
+                                playerDailyInvestment += cupsOfSugarPrice;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 20:
-                            Console.WriteLine();
-                            player.money -= 1.51;
-                            player.inventory.cupsOfSugar += 20;
-                            playerDailyInvestment += 1.51;
-                            break;
+                            if (player.money >= 1.51)
+                            {
+                                Console.WriteLine();
+                                player.money -= 1.51;
+                                player.inventory.cupsOfSugar += 20;
+                                playerDailyInvestment += 1.51;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 48:
-                            Console.WriteLine();
-                            player.money -= 3.39;
-                            player.inventory.cupsOfSugar += 48;
-                            playerDailyInvestment += 3.39;
-                            break;
+                            if (player.money >= 3.39)
+                            {
+                                Console.WriteLine();
+                                player.money -= 3.39;
+                                player.inventory.cupsOfSugar += 48;
+                                playerDailyInvestment += 3.39;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                     }
                 }
                 else
@@ -183,23 +264,50 @@ namespace LemonadeStand
                             Console.WriteLine();
                             break;
                         case 100:
-                            Console.WriteLine();
-                            player.money -= iceCubesPrice;
-                            player.inventory.iceCubes += 100;
-                            playerDailyInvestment += iceCubesPrice;
-                            break;
+                            if (player.money >= iceCubesPrice)
+                            {
+                                Console.WriteLine();
+                                player.money -= iceCubesPrice;
+                                player.inventory.iceCubes += 100;
+                                playerDailyInvestment += iceCubesPrice;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 250:
-                            Console.WriteLine();
-                            player.money -= 2.08;
-                            player.inventory.iceCubes += 250;
-                            playerDailyInvestment += 2.08;
-                            break;
+                            if (player.money >= 2.08)
+                            {
+                                Console.WriteLine();
+                                player.money -= 2.08;
+                                player.inventory.iceCubes += 250;
+                                playerDailyInvestment += 2.08;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                         case 500:
-                            Console.WriteLine();
-                            player.money -= 3.61;
-                            player.inventory.iceCubes += 500;
-                            playerDailyInvestment += 3.61;
-                            break;
+                            if (player.money >= 3.61)
+                            {
+                                Console.WriteLine();
+                                player.money -= 3.61;
+                                player.inventory.iceCubes += 500;
+                                playerDailyInvestment += 3.61;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Not enough money!");
+                                break;
+                            }
                     }
                 }
                 else
