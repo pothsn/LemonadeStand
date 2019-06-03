@@ -12,7 +12,6 @@ namespace LemonadeStand
         public YoungWoman()
         {
             sugarPreference = 5;
-            customerId = 2;
         }
 
         //member methods (CAN DO)

@@ -24,23 +24,8 @@ namespace LemonadeStand
 
         //member methods(CAN DO)
 
-        //public void SellCup()
-        //{
-        //    if (pitcher.CheckPitcher(inventory))
-        //    {
-        //        money += pitcher.cupPrice;
-        //        cupsSold++;
-        //        inventory.paperCups--;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Out of ingredients!");
-        //    }
-        //}
-
         public void SellCup()
-        {
-            
+        {            
             if (pitcher.CheckPitcher(inventory) == true)
             {
                 PourCup();

@@ -13,8 +13,6 @@ namespace LemonadeStand
         {
             sugarPreference = 6;
             pricePreference = .30;
-            customerId = 4;
-
         }
 
         //member methods (CAN DO)

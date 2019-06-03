@@ -12,8 +12,6 @@ namespace LemonadeStand
         public LittleBoy()
         {
             pricePreference = .30;
-            lemonPreference = 6;
-            customerId = 3;
         }
 
         //member methods (CAN DO)

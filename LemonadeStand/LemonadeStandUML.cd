@@ -3,7 +3,7 @@
   <Class Name="LemonadeStand.Game">
     <Position X="10.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAACAAAQAAAAAAEAAAAAAAAQABACUECkAAAAA=</HashCode>
+      <HashCode>AAAAEAAAACAAAQAAAAAAECAAACAAASARACUECkAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -24,7 +24,7 @@
   <Class Name="LemonadeStand.Day">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAARAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAARAAAAAAAAAAAAARAAABAAAAIAABAAAAAAAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -44,7 +44,7 @@
   <Class Name="LemonadeStand.Player">
     <Position X="10.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAAYAAEAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAEAAAEAAEAAACEAAAAYAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -62,14 +62,14 @@
   <Class Name="LemonadeStand.Store">
     <Position X="13.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAACAACAAAAEAAAAEAAAAAAAAAAAAAAAgABAAAIAA=</HashCode>
+      <HashCode>AEAAACAACAAAAEAAAAEAAAAAAAAAAAAAAAgABAAAMAA=</HashCode>
       <FileName>Store.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Customer">
     <Position X="2.75" Y="5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAQAAAggAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAQAAAwgAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -97,7 +97,7 @@
   <Class Name="LemonadeStand.Pitcher">
     <Position X="15.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAEEAEAAAAAAAAAEAAAAAAAABAAEAAQAAAAAIA=</HashCode>
+      <HashCode>AAAAAACEEAEAAAAAAAAAAAACAAAAABAAAAAQAAAAAIA=</HashCode>
       <FileName>Pitcher.cs</FileName>
     </TypeIdentifier>
   </Class>

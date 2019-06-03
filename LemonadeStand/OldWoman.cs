@@ -11,8 +11,7 @@ namespace LemonadeStand
         //constructor (SPAWNER)
         public OldWoman()
         {
-            pricePreference = .20;
-            customerId = 5;
+
         }
 
         //member methods (CAN DO)

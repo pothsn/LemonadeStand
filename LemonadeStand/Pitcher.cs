@@ -35,29 +35,6 @@ namespace LemonadeStand
             lemons = int.Parse(Console.ReadLine());
         }
 
-        //public bool CheckPitcher(Inventory inventory)
-        //{
-        //    if (cupsInPitcher < 1)
-        //    {
-        //        if (inventory.cupsOfSugar >= cupsOfSugar && inventory.iceCubes >= iceCubes && inventory.lemons >= lemons && inventory.paperCups > 0)
-        //        {
-        //            cupsInPitcher = 11;
-        //            inventory.cupsOfSugar -= cupsOfSugar;
-        //            inventory.iceCubes -= iceCubes;
-        //            inventory.lemons -= lemons;
-        //        }
-        //    }
-        //    if (cupsInPitcher >= 1 )
-        //    {
-        //        cupsInPitcher--;
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
         public bool CheckPitcher(Inventory inventory)
         {
             if (cupsInPitcher > 0)
@@ -79,8 +56,5 @@ namespace LemonadeStand
                 return false;
             }
         }
-
-
-
     }
 }

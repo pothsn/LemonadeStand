@@ -37,7 +37,7 @@ namespace LemonadeStand
             Console.WriteLine();
             GameplayLoop();
             Console.WriteLine();
-            Console.WriteLine("Game over! Your total profit was " + totalProfit + ".");
+            Console.WriteLine("Game over! Your total profit was " + totalProfit + ". The game will now restart.");
             Console.WriteLine();
             RunGame();
         }
@@ -142,15 +142,33 @@ namespace LemonadeStand
 
         public void DetermineIfAdjustPriceAndQuality()
         {
-            Console.WriteLine("Current price:\n" + player.pitcher.cupPrice + "\n" + "Current recipe:\n" + player.pitcher.cupsOfSugar + " Cups of sugar" + "\n" + player.pitcher.iceCubes + " ice cubes" + "\n" + player.pitcher.lemons + " lemons" + "\n" + "Would you like to adjust it? Enter yes or no.");
-            string yesNo = Console.ReadLine().ToLower();
-            switch (yesNo)
+            try
             {
-                case "yes":
-                    player.pitcher.AdjustPriceAndQuality();
-                    break;
-                case "no":
-                    break;
+                Console.WriteLine();
+                Console.WriteLine("Current price:\n" + player.pitcher.cupPrice + "\n" + "Current recipe:\n" + player.pitcher.cupsOfSugar + " Cups of sugar" + "\n" + player.pitcher.iceCubes + " ice cubes" + "\n" + player.pitcher.lemons + " lemons" + "\n" + "Would you like to adjust it? Enter yes or no.");
+                string yesNo = Console.ReadLine().ToLower();
+                switch (yesNo)
+                {
+                    case "yes":
+                        Console.WriteLine();
+                        player.pitcher.AdjustPriceAndQuality();
+                        break;
+                    case "no":
+                        Console.WriteLine();
+                        break;
+                    default:
+                        Console.WriteLine();
+                        Console.WriteLine("Invalid input!");
+                        DetermineIfAdjustPriceAndQuality();
+                        break;
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine();
+                Console.WriteLine("Invalid input!");
+                DetermineIfAdjustPriceAndQuality();
             }
         }
 
@@ -158,12 +176,12 @@ namespace LemonadeStand
         {
             foreach (Customer customer in days[currentDay].customers)
             {
-                if (player.pitcher.cupPrice <= customer.pricePreference && player.pitcher.cupsOfSugar >= customer.sugarPreference && player.pitcher.iceCubes >= customer.icePreference && player.pitcher.lemons >= customer.lemonPreference)
+                if (player.pitcher.cupPrice <= customer.pricePreference && player.pitcher.cupsOfSugar >= customer.sugarPreference && player.pitcher.iceCubes >= customer.icePreference && player.pitcher.lemons >= customer.lemonPreference && player.inventory.paperCups > 0)
                 {
                     player.SellCup();
                     days[currentDay].dailyProfit += player.pitcher.cupPrice;
                 }
-                else if(player.pitcher.CheckIfCanRefillPitcher(player.inventory) == false && player.pitcher.cupsInPitcher == 0)
+                else if(player.pitcher.CheckIfCanRefillPitcher(player.inventory) == false || player.pitcher.cupsInPitcher == 0)
                 {
                     Console.WriteLine("Out of supplies!");
                     break;
@@ -172,8 +190,10 @@ namespace LemonadeStand
             days[currentDay].dailyProfit -= store.playerDailyInvestment;
             Console.WriteLine(player.name + " sold " + player.cupsSold + " cups." + "\nDaily profit: " + days[currentDay].dailyProfit + "\nTotal profit: " + CalculateTotalProfit());
             player.inventory.iceCubes = 0;
+            Console.WriteLine();
             Console.WriteLine("Your ice melted!");
-            Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\nPress Enter to continue.");
+            Console.WriteLine();
+            Console.WriteLine(player.name + " has:\n" + player.inventory.paperCups + " paper cups\n" + player.inventory.lemons + " lemons\n" + player.inventory.cupsOfSugar + " cups of sugar\n" + player.inventory.iceCubes + " ice cubes.\n\nPress Enter to continue.");
             Console.ReadLine();
         }
 
