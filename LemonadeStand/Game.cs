@@ -31,10 +31,14 @@ namespace LemonadeStand
             DisplayIntroduction();
             numberOfDays = UserPickDays();
             GenerateDays(numberOfDays);
+            Console.WriteLine();
             GenerateCustomers();
             GeneratePlayerName();
+            Console.WriteLine();
             GameplayLoop();
+            Console.WriteLine();
             Console.WriteLine("Game over! Your total profit was " + totalProfit + ".");
+            Console.WriteLine();
             RunGame();
         }
 
@@ -109,6 +113,7 @@ namespace LemonadeStand
         {
             Console.WriteLine("Enter player name.");
             player.name = Console.ReadLine();
+            Console.WriteLine("Player name: " + player.name);
         }
 
         public void DisplayAllWeatherForecasts()
