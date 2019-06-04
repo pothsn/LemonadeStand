@@ -37,8 +37,53 @@ namespace LemonadeStandTest
             //Assert
             Assert.IsFalse(actual);
         }
-    
+
+        [TestMethod]
+        public void CheckIfCanRefillPitcher_IsTrue_IfHasIngredients()
+        {
+            //Arrange
+            Inventory inventory = new Inventory();
+            Pitcher pitcher = new Pitcher();
+            inventory.cupsOfSugar = 5;
+            inventory.lemons = 5;
+            inventory.iceCubes = 5;
+            inventory.paperCups = 1;
+            pitcher.cupsOfSugar = 5;
+            pitcher.lemons = 5;
+            pitcher.iceCubes = 5;
+            bool actual;
+
+            //Act
+            actual = pitcher.CheckIfCanRefillPitcher(inventory);
+
+            //Assert
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod]
+        public void CheckIfCanRefillPitcher_IsFalse_IfNoHasIngredients()
+        {
+            //Arrange
+            Inventory inventory = new Inventory();
+            Pitcher pitcher = new Pitcher();
+            inventory.cupsOfSugar = 4;
+            inventory.lemons = 5;
+            inventory.iceCubes = 5;
+            inventory.paperCups = 1;
+            pitcher.cupsOfSugar = 5;
+            pitcher.lemons = 5;
+            pitcher.iceCubes = 5;
+            bool actual;
+
+            //Act
+            actual = pitcher.CheckIfCanRefillPitcher(inventory);
+
+            //Assert
+            Assert.IsFalse(actual);
+        }
     }
+
+
 
     [TestClass]
     public class PlayerTest
@@ -89,49 +134,6 @@ namespace LemonadeStandTest
 
             //Assert
             Assert.AreEqual(expectedResult, actual);
-        }
-
-        [TestMethod]
-        public void CheckIfCanRefillPitcher_IsTrue_IfHasIngredients()
-        {
-            //Arrange
-            Inventory inventory = new Inventory();
-            Pitcher pitcher = new Pitcher();
-            inventory.cupsOfSugar = 5;
-            inventory.lemons = 5;
-            inventory.iceCubes = 5;
-            inventory.paperCups = 1;
-            pitcher.cupsOfSugar = 5;
-            pitcher.lemons = 5;
-            pitcher.iceCubes = 5;
-            bool actual;
-
-            //Act
-            actual = pitcher.CheckIfCanRefillPitcher(inventory);
-
-            //Assert
-            Assert.IsTrue(actual);
-        }
-        [TestMethod]
-        public void CheckIfCanRefillPitcher_IsFalse_IfNoHasIngredients()
-        {
-            //Arrange
-            Inventory inventory = new Inventory();
-            Pitcher pitcher = new Pitcher();
-            inventory.cupsOfSugar = 4;
-            inventory.lemons = 5;
-            inventory.iceCubes = 5;
-            inventory.paperCups = 1;
-            pitcher.cupsOfSugar = 5;
-            pitcher.lemons = 5;
-            pitcher.iceCubes = 5;
-            bool actual;
-
-            //Act
-            actual = pitcher.CheckIfCanRefillPitcher(inventory);
-
-            //Assert
-            Assert.IsFalse(actual);
         }
 
         [TestMethod]
