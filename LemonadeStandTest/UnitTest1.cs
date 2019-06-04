@@ -138,17 +138,67 @@ namespace LemonadeStandTest
         public void RefillPitcher_Incriments_CupsInPitcher()
         {
             //Arrange
-            Inventory inventory = new Inventory();
-            Pitcher pitcher = new Pitcher();
-            pitcher.cupsInPitcher = 0;
-            inventory.cupsOfSugar = 6;
-            inventory.lemons = 6;
-            inventory.iceCubes = 6;
+            Player player = new Player();
+            player.pitcher.cupsInPitcher = 0;
+            player.inventory.cupsOfSugar = 4;
+            player.inventory.lemons = 4;
+            player.inventory.iceCubes = 4;
+            int expectedResult = 11;
 
             //Act
+            player.RefillPitcher(player.inventory);
+            int actual = player.pitcher.cupsInPitcher;
 
             //Assesrt
+            Assert.AreEqual(expectedResult, actual);
+        }
 
+        [TestMethod]
+        public void RefillPitcher_Decriments_InventoryCupsOfSugar()
+        {
+            //Arrange
+            Player player = new Player();
+            player.inventory.cupsOfSugar = 4;
+            int expectedResult = 0;
+
+            //Act
+            player.RefillPitcher(player.inventory);
+            int actual = player.inventory.cupsOfSugar;
+
+            //Assesrt
+            Assert.AreEqual(expectedResult, actual);
+        }
+
+        [TestMethod]
+        public void RefillPitcher_Decriments_InventoryLemons()
+        {
+            //Arrange
+            Player player = new Player();
+            player.inventory.lemons = 4;
+            int expectedResult = 0;
+
+            //Act
+            player.RefillPitcher(player.inventory);
+            int actual = player.inventory.lemons;
+
+            //Assesrt
+            Assert.AreEqual(expectedResult, actual);
+        }
+
+        [TestMethod]
+        public void RefillPitcher_Decriments_InventoryIceCubes()
+        {
+            //Arrange
+            Player player = new Player();
+            player.inventory.iceCubes = 4;
+            int expectedResult = 0;
+
+            //Act
+            player.RefillPitcher(player.inventory);
+            int actual = player.inventory.iceCubes;
+
+            //Assesrt
+            Assert.AreEqual(expectedResult, actual);
         }
     }
 }
