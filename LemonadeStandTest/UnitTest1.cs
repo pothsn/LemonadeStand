@@ -203,4 +203,32 @@ namespace LemonadeStandTest
             Assert.AreEqual(expectedResult, actual);
         }
     }
+
+    [TestClass]
+    public class WeatherTest
+    {
+        [TestMethod]
+        public void GenerateWeatherForecast_Returns_ValidWeatherOption()
+        {
+            //Arrange
+            Day day = new Day();
+            bool actual = false;
+
+            //Act
+            string weatherThing = day.weather.weatherForecast;
+            if (weatherThing == "sunny" || weatherThing == "cloudy" || weatherThing == "rainy" || weatherThing == "stormy")
+            {
+                actual = true;
+            }
+
+            //Assert
+            Assert.IsTrue(actual);
+        }
+    }
+
+
+
+
+
+
 }

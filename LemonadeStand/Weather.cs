@@ -13,8 +13,6 @@ namespace LemonadeStand
         public int temperatureForecast;
         public int actualTemperature;
 
-
-
         //constructor (SPAWNER)
         public Weather()
         {
@@ -23,7 +21,6 @@ namespace LemonadeStand
             GenerateTemperatureForecast();
             GenerateActualWeather();
             actualTemperature = GenerateActualTemperature();
-
         }
 
         //member methods (CAN DO)
@@ -73,9 +70,5 @@ namespace LemonadeStand
             actualTemperature = temperatureForecast + actualTemperatureRoll;
             return actualTemperature;
         }
-
-
-
-
     }
 }
